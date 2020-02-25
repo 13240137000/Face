@@ -54,6 +54,8 @@ def main():
 
             time = (t2-t1)/cv2.getTickFrequency()
 
+            print(time)
+
             face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)
 
             face_names = []
