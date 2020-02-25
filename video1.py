@@ -45,7 +45,15 @@ def main():
 
         # Only process every other frame of video to save time
         if process_this_frame:
+
+            t1 = cv2.getTickCount()
+
             face_locations = face_recognition.face_locations(rgb_small_frame)
+
+            t2 = cv2.getTickCount()
+
+            time = (t2-t1)/cv2.getTickFrequency()
+
             face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)
 
             face_names = []

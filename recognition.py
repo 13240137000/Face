@@ -4,10 +4,10 @@ import cv2
 
 def main():
 
-    img = face_recognition.load_image_file("images/ding.jpg")
+    img = face_recognition.load_image_file("images/5z.png")
     face_locations = face_recognition.face_locations(img)
 
-    img = cv2.imread("images/ding.jpg")
+    img = cv2.imread("images/5z.png")
 
     faces = len(face_locations)
 
